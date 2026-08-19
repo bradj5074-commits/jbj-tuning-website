@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book a Mobile Remap | JBJ Tuning + Solutions</title>
+<meta name="description" content="Build your JBJ Tuning remap package and book mobile ECU, Stage 1, Stage 2 or Gearbox/TCU remapping online.">
+<link rel="icon" href="../favicon.png">
+<link rel="stylesheet" href="../style.css">
+<style>
+.booking-wrap{max-width:1100px;margin:auto;padding:48px 20px 70px}
+.booking-head{text-align:center;margin-bottom:30px}
+.booking-head h1{font-size:clamp(36px,7vw,64px);margin:8px 0}
+.booking-head h1 span,.red{color:#e51616}
+.booking-grid{display:grid;grid-template-columns:1.45fr .75fr;gap:22px;align-items:start}
+.booking-card{background:#111;border:1px solid #292929;border-radius:18px;padding:22px}
+.booking-card h2{margin-top:0}
+.opt{display:flex;align-items:center;gap:12px;border:1px solid #333;background:#0b0b0b;border-radius:12px;padding:15px;margin:10px 0;cursor:pointer}
+.opt:has(input:checked){border-color:#e51616;background:#180909}
+.opt input{width:19px;height:19px;accent-color:#e51616}
+.opt .cost{margin-left:auto;font-weight:900}
+.addons{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.sep{border:0;border-top:1px solid #292929;margin:24px 0}
+.summary{position:sticky;top:20px}
+.sumrow{display:flex;justify-content:space-between;gap:12px;padding:8px 0}
+.sumtotal{border-top:1px solid #333;margin-top:8px;padding-top:15px;font-size:23px;font-weight:900}
+.deposit{border:1px solid #6a1a1a;background:#180909;border-radius:12px;padding:15px;margin:16px 0}
+.book-btn{display:block;text-align:center;width:100%;background:#e51616;color:#fff!important;text-decoration:none;padding:16px;border-radius:10px;font-weight:900}
+.note{font-size:13px;color:#aaa;line-height:1.5}
+@media(max-width:760px){.booking-grid{grid-template-columns:1fr}.addons{grid-template-columns:1fr}.summary{position:static}}
+
+.handoff-note{
+  margin:14px 0;
+  padding:13px 14px;
+  border:1px solid #5b1d1d;
+  background:#160b0b;
+  border-radius:10px;
+  color:#ddd;
+  font-size:13px;
+  line-height:1.5;
+}
+.handoff-note strong{color:#fff}
+
+.calendar-instructions{
+  margin:14px 0;
+  padding:14px;
+  border:1px solid #333;
+  background:#101010;
+  border-radius:10px;
+  color:#ddd;
+  font-size:13px;
+  line-height:1.5;
+}
+.calendar-instructions strong{color:#fff}
+
+.selected-summary{
+  margin:10px 0 16px;
+  padding:14px;
+  border:1px solid #343434;
+  background:#090909;
+  border-radius:12px;
+}
+.selected-summary .sumrow{
+  display:flex;
+  justify-content:space-between;
+  gap:14px;
+  padding:9px 0;
+  border-bottom:1px solid #1e1e1e;
+}
+.selected-summary .sumrow:last-child{border-bottom:0}
+.selected-summary .sumtotal{
+  margin-top:8px;
+  padding-top:14px;
+  border-top:2px solid #e51616;
+  border-bottom:0;
+  font-size:24px;
+  font-weight:900;
+}
+.selected-summary .sumtotal span:last-child{color:#e51616}
+
+.gains-card{
+  max-width:1100px;
+  margin:0 auto 26px;
+  background:#111;
+  border:1px solid #292929;
+  border-radius:18px;
+  padding:22px;
+}
+.gains-card h2{
+  margin:8px 0 10px;
+  font-size:clamp(28px,5vw,44px);
+}
+.gains-intro{
+  color:#bbb;
+  line-height:1.6;
+  margin:0 0 18px;
+}
+.byteflash-wrap{
+  overflow:hidden;
+  border-radius:14px;
+  border:1px solid #333;
+  background:#fff;
+}
+.byteflash-wrap iframe{
+  display:block;
+  width:100%;
+  min-height:400px;
+  border:0;
+}
+.stage2-note{
+  margin-top:16px;
+  padding:15px 16px;
+  border:1px solid #5b1d1d;
+  background:#180909;
+  border-radius:12px;
+  color:#ddd;
+  line-height:1.55;
+}
+.stage2-note strong{color:#fff}
+
+
+.booking-transition{
+  max-width:1100px;
+  margin:28px auto 16px;
+  padding:0 4px;
+}
+.booking-transition h2{
+  margin:7px 0 8px;
+  font-size:clamp(27px,5vw,42px);
+}
+.booking-transition p{
+  margin:0;
+  color:#aaa;
+  line-height:1.55;
+}
+
+
+.opt.locked{opacity:.45;pointer-events:none}
+.opt.locked input{cursor:not-allowed}
+.solution-lock-note{margin:8px 0 12px;color:#ff8d8d;font-size:13px;font-weight:700}
+
+.vehicle-details{margin-bottom:22px}
+.vehicle-form{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
+.vehicle-field{display:flex;flex-direction:column;gap:6px}
+.vehicle-field label{font-size:12px;font-weight:800;letter-spacing:.7px;color:#cfd6df;text-transform:uppercase}
+.vehicle-field input{width:100%;background:#0a0d10;border:1px solid #2b323b;color:#fff;border-radius:10px;padding:13px 14px;font:inherit;outline:none}
+.vehicle-field input:focus{border-color:#e51414}
+.vehicle-field input.error{border-color:#e51414;box-shadow:0 0 0 2px rgba(229,20,20,.12)}
+@media(max-width:650px){.vehicle-form{grid-template-columns:1fr}}
+
+</style>
+</head>
+<body>
+<header><div class="wrap"><nav>
+<a class="brand" href="../"><img src="../jbj-logo.jpg" alt="JBJ Tuning + Solutions"></a>
+<div class="nav"><a href="../#services">Services</a><a href="../ecu-remapping/">ECU Remapping</a><a href="../#contact">Contact</a></div>
+<a class="btn desktop-quote" href="#booking-options">Book Online</a>
+</nav></div></header>
+<main class="booking-wrap">
+<section class="booking-head">
+<div class="kicker">CHECK GAINS • CHOOSE OPTIONS • BOOK</div>
+<h1>BUILD YOUR <span>REMAP</span></h1>
+<p>Choose the services you want, review your package total, then send your booking request directly to JBJ Tuning on WhatsApp.</p>
+</section>
+
+
+
+<section class="gains-card" id="vehicle-gains">
+  <div class="kicker">CHECK YOUR VEHICLE</div>
+  <h2>CHECK YOUR <span class="red">TUNING GAINS</span></h2>
+  <p class="gains-intro">
+    Select your vehicle below to see estimated <strong>Stage 1 BHP and torque gains</strong>
+    before choosing your remap package.
+  </p>
+
+  <div class="byteflash-wrap">
+    <iframe
+      allowtransparency="true"
+      frameborder="0"
+      width="100%"
+      height="400"
+      src="https://widget.byteflash.dev/"
+      title="ByteFLASH ECU Tuning Files"
+      loading="lazy">
+    </iframe>
+  </div>
+
+  <div class="stage2-note">
+    <strong>Looking for Stage 2?</strong>
+    Stage 2 results depend on the vehicle, ECU and supporting hardware.
+    Select <strong>Stage 2 Remap</strong> in the booking section below and enter your vehicle details
+    when choosing your appointment. JBJ will confirm the expected Stage 2 figures for your vehicle.
+  </div>
+
+  </section>
+
+<div class="booking-transition">
+  <div class="kicker">HAPPY WITH THE GAINS?</div>
+  <h2>BUILD YOUR <span class="red">REMAP PACKAGE</span></h2>
+  <p>Select your remap and any solutions below. Your selected services and total will update before you book.</p>
+</div>
+
+<section class="booking-card vehicle-details" id="vehicle-details">
+<div class="kicker">YOUR VEHICLE</div>
+<h2 style="margin:8px 0 8px">Vehicle Details</h2>
+<p class="note">Enter the vehicle details below. These will be included automatically in your WhatsApp booking request.</p>
+<div class="vehicle-form">
+  <div class="vehicle-field"><label for="vehicleReg">Registration *</label><input id="vehicleReg" type="text" autocomplete="off" placeholder="e.g. AB12 CDE"></div>
+  <div class="vehicle-field"><label for="vehicleMakeModel">Make &amp; model *</label><input id="vehicleMakeModel" type="text" placeholder="e.g. BMW 320d"></div>
+  <div class="vehicle-field"><label for="vehicleEngine">Engine</label><input id="vehicleEngine" type="text" placeholder="e.g. 2.0 Diesel"></div>
+  <div class="vehicle-field"><label for="vehicleYear">Year</label><input id="vehicleYear" type="text" inputmode="numeric" placeholder="e.g. 2018"></div>
+</div>
+</section>
+
+<div class="booking-grid" id="booking-options">
+<section class="booking-card">
+<h2>1. Choose your services</h2>
+<p class="note">Select at least one main service first. You can then add any required £20 solutions.</p>
+
+<label class="opt"><input type="checkbox" class="main-service" value="Stage 1 Remap" data-price="180"><b>Stage 1 Remap</b><span class="cost">£180</span></label>
+<label class="opt"><input type="checkbox" class="main-service" value="Stage 2 Remap" data-price="220"><b>Stage 2 Remap</b><span class="cost">£220</span></label>
+<label class="opt"><input type="checkbox" class="main-service" value="Gearbox / TCU Remap" data-price="180"><b>Gearbox / TCU Remap</b><span class="cost">£180</span></label>
+<label class="opt"><input type="checkbox" class="main-service" value="Agricultural Remapping" data-price="180"><b>Agricultural Remapping</b><span class="cost">£180</span></label>
+<label class="opt"><input type="checkbox" class="main-service" value="Motorbike Remapping" data-price="180"><b>Motorbike Remapping</b><span class="cost">£180</span></label>
+<label class="opt"><input type="checkbox" class="main-service" value="Solutions" data-price="150"><b>Solutions</b><span class="cost">£150</span></label>
+
+<hr class="sep">
+<h2>2. Add solutions</h2><div id="solutionLockNote" class="solution-lock-note">Select a main service above before adding solutions.</div>
+<p class="note">Each solution adds £20.</p>
+<div class="addons">
+<label class="opt"><input class="addon" type="checkbox" value="DPF Solution" data-price="20"><b>DPF Solution</b><span class="cost">+£20</span></label>
+<label class="opt"><input class="addon" type="checkbox" value="EGR Solution" data-price="20"><b>EGR Solution</b><span class="cost">+£20</span></label>
+<label class="opt"><input class="addon" type="checkbox" value="AdBlue Solution" data-price="20"><b>AdBlue Solution</b><span class="cost">+£20</span></label>
+<label class="opt"><input class="addon" type="checkbox" value="DTC Solution" data-price="20"><b>DTC Solution</b><span class="cost">+£20</span></label>
+</div>
+
+</section>
+<aside class="booking-card summary">
+<div class="kicker">YOUR SELECTED SERVICES</div>
+<h2 style="margin:8px 0 12px">Booking Summary</h2>
+<div id="summary" class="selected-summary"></div>
+<div class="deposit"><b>No deposit required</b><br><span class="note">Send your selected package to JBJ Tuning on WhatsApp. We’ll confirm availability with you directly.</span></div>
+
+
+
+
+<div class="calendar-instructions">
+  <strong>Next step:</strong> send your booking request to JBJ Tuning on WhatsApp.
+  Your selected services and total will be included automatically.
+</div>
+
+<a class="book-btn" id="bookBtn" href="#">SEND BOOKING TO WHATSAPP →</a>
+<p class="note">WhatsApp will open with your full booking summary ready to send.</p>
+</aside>
+</div>
+</main>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const mainServices = Array.from(document.querySelectorAll('input.main-service'));
+  const addons = Array.from(document.querySelectorAll('input.addon'));
+  const summary = document.getElementById('summary');
+  const bookBtn = document.getElementById('bookBtn');
+  const lockNote = document.getElementById('solutionLockNote');
+  const whatsappNumber = '447469879811';
+  const vehicleReg = document.getElementById('vehicleReg');
+  const vehicleMakeModel = document.getElementById('vehicleMakeModel');
+  const vehicleEngine = document.getElementById('vehicleEngine');
+  const vehicleYear = document.getElementById('vehicleYear');
+
+  function hasMainService() {
+    return mainServices.some(function (input) { return input.checked; });
+  }
+
+  function updateAddonLock() {
+    const unlocked = hasMainService();
+    addons.forEach(function (input) {
+      input.disabled = !unlocked;
+      const label = input.closest('label');
+      if (label) label.classList.toggle('locked', !unlocked);
+      if (!unlocked) input.checked = false;
+    });
+    if (lockNote) lockNote.style.display = unlocked ? 'none' : 'block';
+  }
+
+  function getSelectedItems() {
+    const items = [];
+    mainServices.forEach(function (input) {
+      if (input.checked) items.push({name: input.value, price: Number(input.dataset.price || 0)});
+    });
+    addons.forEach(function (input) {
+      if (input.checked) items.push({name: input.value, price: Number(input.dataset.price || 0)});
+    });
+    return items;
+  }
+
+  function updateSummary() {
+    const items = getSelectedItems();
+    const total = items.reduce(function (sum, item) { return sum + item.price; }, 0);
+
+    if (!summary) return;
+
+    if (items.length === 0) {
+      summary.innerHTML =
+        '<div class="sumrow"><span>No services selected yet</span><b>£0</b></div>' +
+        '<div class="sumrow sumtotal"><span>TOTAL</span><span>£0</span></div>';
+      return;
+    }
+
+    let output = '';
+    items.forEach(function (item) {
+      output += '<div class="sumrow"><span>' + item.name + '</span><b>£' + item.price + '</b></div>';
+    });
+    output += '<div class="sumrow sumtotal"><span>TOTAL</span><span>£' + total + '</span></div>';
+    summary.innerHTML = output;
+  }
+
+  function refresh() {
+    updateAddonLock();
+    updateSummary();
+  }
+
+  mainServices.forEach(function (input) {
+    input.addEventListener('change', refresh);
+  });
+
+  addons.forEach(function (input) {
+    input.addEventListener('change', updateSummary);
+  });
+
+  if (bookBtn) {
+    bookBtn.addEventListener('click', function (event) {
+      event.preventDefault();
+
+      if (!hasMainService()) {
+        alert('Please select at least one main service before booking.');
+        return;
+      }
+
+      [vehicleReg, vehicleMakeModel].forEach(function (input) { if (input) input.classList.remove('error'); });
+      if (!vehicleReg || !vehicleReg.value.trim() || !vehicleMakeModel || !vehicleMakeModel.value.trim()) {
+        if (vehicleReg && !vehicleReg.value.trim()) vehicleReg.classList.add('error');
+        if (vehicleMakeModel && !vehicleMakeModel.value.trim()) vehicleMakeModel.classList.add('error');
+        alert('Please enter the vehicle registration and make/model before booking.');
+        const firstMissing = vehicleReg && !vehicleReg.value.trim() ? vehicleReg : vehicleMakeModel;
+        if (firstMissing) { firstMissing.focus(); firstMissing.scrollIntoView({behavior:'smooth', block:'center'}); }
+        return;
+      }
+
+      const items = getSelectedItems();
+      const total = items.reduce(function (sum, item) { return sum + item.price; }, 0);
+      const serviceLines = items.map(function (item) {
+        return '- ' + item.name + ': £' + item.price;
+      }).join('\n');
+
+      const vehicleLines = [
+        'Registration: ' + vehicleReg.value.trim(),
+        'Make / Model: ' + vehicleMakeModel.value.trim(),
+        'Engine: ' + (vehicleEngine && vehicleEngine.value.trim() ? vehicleEngine.value.trim() : 'Not provided'),
+        'Year: ' + (vehicleYear && vehicleYear.value.trim() ? vehicleYear.value.trim() : 'Not provided')
+      ].join('\n');
+
+      const message =
+        'Hi JBJ Tuning, I would like to book the following package:' +
+        '\n\nVEHICLE DETAILS' +
+        '\n' + vehicleLines +
+        '\n\nSELECTED SERVICES' +
+        '\n' + serviceLines +
+        '\n\nTotal: £' + total +
+        '\n\nPlease can you confirm availability?';
+
+      window.location.href = 'https://wa.me/' + whatsappNumber + '?text=' + encodeURIComponent(message);
+    });
+  }
+
+  refresh();
+});
+</script>
+</body></html>
