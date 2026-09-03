@@ -3,87 +3,66 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>JBJ Tuning — Booking</title>
+  <title>Book a Mobile Remap | JBJ Tuning + Solutions</title>
+  <meta name="description" content="Build your JBJ Tuning remap package, add vehicle solutions, choose your booking details and secure your appointment with a £50 deposit." />
   <style>
-    :root{--bg:#0b0b0b;--card:#151515;--line:#2b2b2b;--text:#fff;--muted:#bdbdbd;--red:#d71920;--green:#25D366}
-    *{box-sizing:border-box} body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text)}
-    .wrap{max-width:980px;margin:auto;padding:24px}.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;margin:18px 0}
-    h1,h2{margin-top:0}.red{color:var(--red)} .muted{color:var(--muted);line-height:1.5}
-    .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.full{grid-column:1/-1}
-    label{display:block;font-weight:700;margin-bottom:6px} input,select,textarea{width:100%;padding:13px;border-radius:9px;border:1px solid #444;background:#0e0e0e;color:#fff;font-size:16px} textarea{min-height:90px}
-    .service{display:flex;align-items:center;gap:10px;border:1px solid #333;border-radius:10px;padding:12px;margin:8px 0}.service input{width:auto}.service span{margin-left:auto;font-weight:700}
-    .summary{white-space:pre-wrap;background:#0d0d0d;border:1px solid #333;border-radius:10px;padding:15px;line-height:1.5}
-    button{width:100%;padding:16px;border:0;border-radius:10px;background:var(--green);color:#fff;font-weight:900;font-size:17px;cursor:pointer}.note{font-size:13px;color:#aaa;margin-top:10px}.required-note{font-size:14px;font-weight:800;margin:-4px 0 16px;color:#fff}.required-note span{color:var(--red);font-size:18px}
-    @media(max-width:650px){.grid{grid-template-columns:1fr}.full{grid-column:auto}}
+    :root{
+      --bg:#080808;
+      --panel:#111;
+      --panel2:#181818;
+      --red:#e51414;
+      --red2:#ff3030;
+      --text:#f5f5f5;
+      --muted:#aaa;
+      --line:#2a2a2a;
+      --success:#36d17c;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Arial,Helvetica,sans-serif;background:radial-gradient(circle at 85% 15%, rgba(229,20,20,.12), transparent 28%),linear-gradient(180deg,#060606,#0b0b0b 45%,#080808);color:var(--text)}
+    .wrap{max-width:1120px;margin:auto;padding:22px}.top{padding:28px 0 16px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:20px;align-items:center;flex-wrap:wrap}.brand h1{margin:0;font-size:clamp(34px,7vw,68px);font-style:italic;letter-spacing:-4px}.brand h1 span{color:var(--red)}.brand p{margin:4px 0 0;color:#ccc;letter-spacing:4px;font-size:12px}.badge{border:1px solid #4a1515;background:#160909;color:#fff;padding:10px 14px;border-radius:999px;font-size:13px;font-weight:700}.hero{padding:44px 0 24px}.eyebrow{color:var(--red);font-weight:800;letter-spacing:2px;text-transform:uppercase;font-size:13px}h2{font-size:clamp(34px,6vw,58px);line-height:.98;margin:10px 0 14px;text-transform:uppercase}.hero p{max-width:720px;color:#bbb;font-size:17px;line-height:1.6}.grid{display:grid;grid-template-columns:1.4fr .8fr;gap:24px;align-items:start}.card{background:linear-gradient(180deg,#141414,#0d0d0d);border:1px solid var(--line);border-radius:18px;padding:24px;box-shadow:0 20px 50px rgba(0,0,0,.25)}.section-title{margin:0 0 8px;font-size:24px}.section-copy{margin:0 0 18px;color:var(--muted)}.choice{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:17px;border:1px solid #303030;border-radius:14px;margin:10px 0;cursor:pointer;transition:.18s;background:#101010}.choice:hover{border-color:#5b1c1c}.choice.active{border-color:var(--red);box-shadow:0 0 0 1px var(--red) inset;background:#160b0b}.choice .left{display:flex;align-items:center;gap:12px}.choice input{accent-color:var(--red);width:18px;height:18px}.choice b{display:block;font-size:16px}.choice small{color:#999}.price{font-weight:900;font-size:19px;white-space:nowrap}.divider{height:1px;background:var(--line);margin:26px 0}.addons{display:grid;grid-template-columns:1fr 1fr;gap:10px}.addon{border:1px solid #303030;border-radius:12px;padding:14px;display:flex;gap:10px;align-items:center;background:#101010;cursor:pointer}.addon:has(input:checked){border-color:var(--red);background:#160b0b}.addon input{accent-color:var(--red);width:18px;height:18px}label span{display:block}.addon-price{color:#ddd;font-weight:700;margin-left:auto}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.field{margin:0}.field.full{grid-column:1/-1}.field label{display:block;font-size:13px;color:#bbb;margin:0 0 7px;font-weight:700}input, textarea{width:100%;background:#0b0b0b;border:1px solid #303030;color:#fff;border-radius:10px;padding:13px 14px;font:inherit;outline:none}input:focus,textarea:focus{border-color:var(--red)}textarea{min-height:92px;resize:vertical}.summary{position:sticky;top:18px}.summary-box{background:#0b0b0b;border:1px solid #292929;border-radius:14px;padding:16px;margin-top:14px}.row{display:flex;justify-content:space-between;gap:16px;padding:8px 0;color:#ccc}.row strong{color:#fff}.total{border-top:1px solid #2c2c2c;margin-top:9px;padding-top:16px;font-size:24px}.deposit{margin:16px 0;background:linear-gradient(90deg,#220808,#160909);border:1px solid #6f1c1c;border-radius:13px;padding:16px}.deposit b{font-size:20px}.deposit small{display:block;color:#bbb;margin-top:4px}.btn{width:100%;border:0;border-radius:12px;padding:16px 18px;background:var(--red);color:#fff;font-weight:900;font-size:16px;cursor:pointer;text-transform:uppercase;letter-spacing:.6px}.btn:hover{background:var(--red2)}.btn.secondary{background:#191919;border:1px solid #353535;margin-top:10px}.notice{font-size:12px;color:#888;line-height:1.5;margin:12px 2px 0}.success{display:none;margin-top:14px;border:1px solid #235b3c;background:#0c1c13;color:#c7ffdd;padding:13px;border-radius:10px}footer{padding:40px 0;color:#777;text-align:center;font-size:13px}@media(max-width:800px){.grid{grid-template-columns:1fr}.summary{position:static}.addons,.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}}
   </style>
 </head>
 <body>
-<div class="wrap">
-  <h1>BOOK YOUR <span class="red">REMAP</span></h1>
-  <p class="muted">Complete your details and choose your service. Your booking summary will open in WhatsApp ready to send to JBJ Tuning.</p>
-
-  <div class="card">
-    <h2>Your details</h2>
-    <p class="required-note"><span>*</span> Required / mandatory field</p>
-    <div class="grid">
-      <div><label for="name">NAME *</label><input id="name" required placeholder="Your full name"></div>
-      <div><label for="reg">CAR REG *</label><input id="reg" required placeholder="e.g. AB12 CDE" style="text-transform:uppercase"></div>
-      <div class="full"><label for="address">ADDRESS / POSTCODE *</label><textarea id="address" required placeholder="Your address and postcode"></textarea></div>
-      <div><label for="make">Make / Model</label><input id="make" placeholder="e.g. BMW 330d"></div>
-      <div><label for="year">Year</label><input id="year" placeholder="e.g. 2018"></div>
-      <div><label for="phone">Phone</label><input id="phone" placeholder="Your contact number"></div>
-      <div><label for="date">Preferred date</label><input id="date" type="date"></div>
-    </div>
+  <div class="wrap">
+    <header class="top"><div class="brand"><h1>J<span>B</span>J</h1><p>TUNING + SOLUTIONS</p></div><div class="badge">MOBILE TUNING • WE COME TO YOU</div></header>
+    <section class="hero"><div class="eyebrow">Online Booking</div><h2>Build Your Remap</h2><p>Choose your tuning package, add any required vehicle solutions, enter your vehicle and contact details, then send the full booking summary to us on WhatsApp.</p></section>
+    <main class="grid">
+      <section class="card">
+        <h3 class="section-title">1. Choose your service</h3><p class="section-copy">Select one main service. Gearbox / TCU Remapping can also be added alongside Stage 1 or Stage 2.</p>
+        <label class="choice active" data-main="stage1"><div class="left"><input type="radio" name="main" value="Stage 1 Remap" data-price="180" checked><div><b>Stage 1 Remap</b><small>Performance remapping</small></div></div><div class="price">£180</div></label>
+        <label class="choice" data-main="stage2"><div class="left"><input type="radio" name="main" value="Stage 2 Remap" data-price="220"><div><b>Stage 2 Remap</b><small>For suitably modified vehicles</small></div></div><div class="price">£220</div></label>
+        <label class="choice" data-main="gearbox"><div class="left"><input type="radio" name="main" value="Gearbox / TCU Remap" data-price="180"><div><b>Gearbox / TCU Remap</b><small>Standalone gearbox tuning</small></div></div><div class="price">£180</div></label>
+        <div class="divider"></div><h3 class="section-title">2. Add solutions</h3><p class="section-copy">Each selected solution adds £20 to your package.</p>
+        <div class="addons"><label class="addon"><input type="checkbox" class="solution" value="DPF Solution" data-price="20"><span>DPF Solution</span><span class="addon-price">+£20</span></label><label class="addon"><input type="checkbox" class="solution" value="EGR Solution" data-price="20"><span>EGR Solution</span><span class="addon-price">+£20</span></label><label class="addon"><input type="checkbox" class="solution" value="AdBlue Solution" data-price="20"><span>AdBlue Solution</span><span class="addon-price">+£20</span></label><label class="addon"><input type="checkbox" class="solution" value="DTC Solution" data-price="20"><span>DTC Solution</span><span class="addon-price">+£20</span></label></div>
+        <div class="divider"></div><label class="addon"><input type="checkbox" id="addGearbox" value="Gearbox / TCU Remap" data-price="180"><span><b>Add Gearbox / TCU Remap</b><small style="color:#999;margin-top:3px">Available with Stage 1 or Stage 2</small></span><span class="addon-price">+£180</span></label>
+        <div class="divider"></div><h3 class="section-title">3. Vehicle & booking details</h3><p class="section-copy"><b style="color:#e51414">* Required / mandatory field</b><br>We are a mobile service, so please complete every field marked with an <b style="color:#e51414">*</b> before sending your booking to WhatsApp.</p>
+        <div class="form-grid">
+          <div class="field"><label>Car registration <span style="color:#e51414">*</span></label><input id="reg" autocomplete="off" placeholder="AB12 CDE" required></div>
+          <div class="field"><label>Make & model</label><input id="vehicle" placeholder="e.g. BMW 320d"></div>
+          <div class="field"><label>Engine</label><input id="engine" placeholder="e.g. 2.0 diesel"></div>
+          <div class="field"><label>Year</label><input id="year" inputmode="numeric" placeholder="2018"></div>
+          <div class="field"><label>Your name <span style="color:#e51414">*</span></label><input id="name" autocomplete="name" required></div>
+          <div class="field"><label>Mobile number</label><input id="phone" autocomplete="tel"></div>
+          <div class="field full"><label>Email address</label><input id="email" type="email" autocomplete="email"></div>
+          <div class="field full"><label>Mobile service address / postcode <span style="color:#e51414">*</span></label><input id="address" autocomplete="street-address" required></div>
+          <div class="field full"><label>Preferred date / time</label><input id="preferred" placeholder="e.g. Friday afternoon"></div>
+          <div class="field full"><label>Additional notes</label><textarea id="notes" placeholder="Anything we should know about the vehicle?"></textarea></div>
+        </div>
+      </section>
+      <aside class="card summary"><div class="eyebrow">Your Basket</div><h3 class="section-title" style="margin-top:7px">Booking Summary</h3><div id="summaryItems" class="summary-box"></div><div class="deposit"><b>£50 deposit today</b><small>The remaining balance is payable when the work is completed.</small></div><button class="btn" id="continueBtn">Send Booking to WhatsApp</button><button class="btn secondary" type="button" id="copyBtn">Copy Booking Summary</button><div class="success" id="success"></div><p class="notice">Tapping the button opens WhatsApp with your full booking summary ready to send directly to JBJ Tuning + Solutions.</p></aside>
+    </main><footer>JBJ Tuning + Solutions • Mobile Tuning Specialists</footer>
   </div>
-
-  <div class="card">
-    <h2>Choose service</h2>
-    <label class="service"><input type="radio" name="main" value="Stage 1 Remap — £180" data-price="180"> Stage 1 Remap <span>£180</span></label>
-    <label class="service"><input type="radio" name="main" value="Stage 2 Remap — £220" data-price="220"> Stage 2 Remap <span>£220</span></label>
-    <label class="service"><input type="radio" name="main" value="Gearbox / TCU Remap — £180" data-price="180"> Gearbox / TCU Remap <span>£180</span></label>
-    <p class="muted">Optional solutions (+£20 each)</p>
-    <label class="service"><input type="checkbox" class="addon" value="DPF Solution" data-price="20"> DPF Solution <span>+£20</span></label>
-    <label class="service"><input type="checkbox" class="addon" value="EGR Solution" data-price="20"> EGR Solution <span>+£20</span></label>
-    <label class="service"><input type="checkbox" class="addon" value="AdBlue Solution" data-price="20"> AdBlue Solution <span>+£20</span></label>
-    <label class="service"><input type="checkbox" class="addon" value="DTC Work" data-price="20"> DTC Work <span>+£20</span></label>
-  </div>
-
-  <div class="card">
-    <h2>Booking summary</h2>
-    <div id="summary" class="summary">Enter your details and select a service.</div>
-    <br><button id="send">SEND BOOKING TO WHATSAPP</button>
-    <div class="note">* NAME, CAR REG and ADDRESS / POSTCODE are required before a booking can be sent.</div>
-  </div>
-</div>
 <script>
-const $=id=>document.getElementById(id);
-const fields=['name','reg','address','make','year','phone','date'];
-function selectedMain(){return document.querySelector('input[name="main"]:checked')}
-function build(){
- const main=selectedMain(); const addons=[...document.querySelectorAll('.addon:checked')];
- let total=main?Number(main.dataset.price):0; addons.forEach(a=>total+=Number(a.dataset.price));
- let lines=[
-  'JBJ TUNING BOOKING', '',
-  'NAME: '+($('name').value.trim()||'—'),
-  'CAR REG: '+($('reg').value.trim().toUpperCase()||'—'),
-  'ADDRESS / POSTCODE: '+($('address').value.trim()||'—'),
-  'MAKE / MODEL: '+($('make').value.trim()||'—'),
-  'YEAR: '+($('year').value.trim()||'—'),
-  'PHONE: '+($('phone').value.trim()||'—'),
-  'PREFERRED DATE: '+($('date').value||'—'), '',
-  'SERVICE: '+(main?main.value:'—'),
-  'SOLUTIONS: '+(addons.length?addons.map(a=>a.value).join(', '):'None'),
-  'TOTAL: £'+total
- ]; return lines.join('\n');
-}
-function update(){ $('summary').textContent=build(); }
-fields.forEach(f=>$(f).addEventListener('input',update)); document.querySelectorAll('input[type="radio"],input[type="checkbox"]').forEach(i=>i.addEventListener('change',update));
-$('send').addEventListener('click',()=>{
- const missing=[]; if(!$('name').value.trim())missing.push('NAME'); if(!$('reg').value.trim())missing.push('CAR REG'); if(!$('address').value.trim())missing.push('ADDRESS / POSTCODE');
- if(missing.length){alert('Please complete the required fields: '+missing.join(', ')); return;}
- if(!selectedMain()){alert('Please select a main service before sending your booking.');return;}
- const url='https://wa.me/447469879811?text='+encodeURIComponent(build()); window.location.href=url;
-}); update();
+  const DEPOSIT = 50; const WHATSAPP_NUMBER = "447469879811"; const mainRadios = [...document.querySelectorAll('input[name="main"]')]; const solutions = [...document.querySelectorAll('.solution')]; const addGearbox = document.getElementById('addGearbox'); const summaryItems = document.getElementById('summaryItems'); const continueBtn = document.getElementById('continueBtn'); const copyBtn = document.getElementById('copyBtn'); const success = document.getElementById('success');
+  function selectedMain(){return mainRadios.find(x => x.checked)}
+  function updateChoices(){document.querySelectorAll('.choice').forEach(el=>{const radio=el.querySelector('input');el.classList.toggle('active',radio.checked)});const main=selectedMain();const gearboxIsMain=main&&main.value.includes('Gearbox');addGearbox.checked=gearboxIsMain?false:addGearbox.checked;addGearbox.disabled=gearboxIsMain;addGearbox.closest('.addon').style.opacity=gearboxIsMain?'.45':'1'}
+  function basket(){const main=selectedMain();let items=[{name:main.value,price:Number(main.dataset.price)}];solutions.filter(s=>s.checked).forEach(s=>items.push({name:s.value,price:Number(s.dataset.price)}));if(addGearbox.checked&&!main.value.includes('Gearbox'))items.push({name:'Gearbox / TCU Remap',price:180});const total=items.reduce((a,b)=>a+b.price,0);return{items,total,balance:Math.max(0,total-DEPOSIT)}}
+  function render(){updateChoices();const b=basket();summaryItems.innerHTML=b.items.map(i=>`<div class="row"><span>${i.name}</span><strong>£${i.price}</strong></div>`).join('')+`<div class="row total"><strong>Total</strong><strong>£${b.total}</strong></div>`+`<div class="row"><span>Deposit</span><strong>£${DEPOSIT}</strong></div>`+`<div class="row"><span>Balance after deposit</span><strong>£${b.balance}</strong></div>`}
+  function bookingText(){const b=basket();const val=id=>document.getElementById(id).value.trim();return['JBJ TUNING + SOLUTIONS BOOKING','', 'Package:',...b.items.map(i=>`- ${i.name}: £${i.price}`),'',`Total: £${b.total}`,`Deposit: £${DEPOSIT}`,`Balance: £${b.balance}`,'',`CAR REG: ${val('reg')}`,`Vehicle: ${val('vehicle')}`,`Engine: ${val('engine')}`,`Year: ${val('year')}`,`NAME: ${val('name')}`,`Phone: ${val('phone')}`,`Email: ${val('email')}`,`ADDRESS: ${val('address')}`,`Preferred date/time: ${val('preferred')}`,`Notes: ${val('notes')}`].join('\n')}
+  function validate(){const required=['reg','name','address'];for(const id of required){const el=document.getElementById(id);if(!el.value.trim()){el.focus();el.style.borderColor='#e51414';return false}el.style.borderColor=''}return true}
+  mainRadios.forEach(x=>x.addEventListener('change',render));solutions.forEach(x=>x.addEventListener('change',render));addGearbox.addEventListener('change',render);
+  copyBtn.addEventListener('click',async()=>{await navigator.clipboard.writeText(bookingText());success.style.display='block';success.textContent='Booking summary copied.'});
+  continueBtn.addEventListener('click',()=>{if(!validate()){success.style.display='block';success.textContent='Please complete the highlighted booking details first.';return}localStorage.setItem('jbjBooking',JSON.stringify({summary:bookingText(),basket:basket()}));const message=encodeURIComponent(bookingText());window.location.href=`https://wa.me/${WHATSAPP_NUMBER}?text=${message}`});render();
 </script>
 </body>
 </html>
