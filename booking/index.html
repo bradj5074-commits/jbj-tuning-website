@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JBJ Tuning — Booking</title>
+  <style>
+    :root{--bg:#0b0b0b;--card:#151515;--line:#2b2b2b;--text:#fff;--muted:#bdbdbd;--red:#d71920;--green:#25D366}
+    *{box-sizing:border-box} body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text)}
+    .wrap{max-width:980px;margin:auto;padding:24px}.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;margin:18px 0}
+    h1,h2{margin-top:0}.red{color:var(--red)} .muted{color:var(--muted);line-height:1.5}
+    .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.full{grid-column:1/-1}
+    label{display:block;font-weight:700;margin-bottom:6px} input,select,textarea{width:100%;padding:13px;border-radius:9px;border:1px solid #444;background:#0e0e0e;color:#fff;font-size:16px} textarea{min-height:90px}
+    .service{display:flex;align-items:center;gap:10px;border:1px solid #333;border-radius:10px;padding:12px;margin:8px 0}.service input{width:auto}.service span{margin-left:auto;font-weight:700}
+    .summary{white-space:pre-wrap;background:#0d0d0d;border:1px solid #333;border-radius:10px;padding:15px;line-height:1.5}
+    button{width:100%;padding:16px;border:0;border-radius:10px;background:var(--green);color:#fff;font-weight:900;font-size:17px;cursor:pointer}.note{font-size:13px;color:#aaa;margin-top:10px}
+    @media(max-width:650px){.grid{grid-template-columns:1fr}.full{grid-column:auto}}
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <h1>BOOK YOUR <span class="red">REMAP</span></h1>
+  <p class="muted">Complete your details and choose your service. Your booking summary will open in WhatsApp ready to send to JBJ Tuning.</p>
+
+  <div class="card">
+    <h2>Your details</h2>
+    <div class="grid">
+      <div><label for="name">NAME *</label><input id="name" required placeholder="Your full name"></div>
+      <div><label for="reg">CAR REG *</label><input id="reg" required placeholder="e.g. AB12 CDE" style="text-transform:uppercase"></div>
+      <div class="full"><label for="address">ADDRESS / POSTCODE *</label><textarea id="address" required placeholder="Your address and postcode"></textarea></div>
+      <div><label for="make">Make / Model</label><input id="make" placeholder="e.g. BMW 330d"></div>
+      <div><label for="year">Year</label><input id="year" placeholder="e.g. 2018"></div>
+      <div><label for="phone">Phone</label><input id="phone" placeholder="Your contact number"></div>
+      <div><label for="date">Preferred date</label><input id="date" type="date"></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Choose service</h2>
+    <label class="service"><input type="radio" name="main" value="Stage 1 Remap — £180" data-price="180"> Stage 1 Remap <span>£180</span></label>
+    <label class="service"><input type="radio" name="main" value="Stage 2 Remap — £220" data-price="220"> Stage 2 Remap <span>£220</span></label>
+    <label class="service"><input type="radio" name="main" value="Gearbox / TCU Remap — £180" data-price="180"> Gearbox / TCU Remap <span>£180</span></label>
+    <p class="muted">Optional solutions (+£20 each)</p>
+    <label class="service"><input type="checkbox" class="addon" value="DPF Solution" data-price="20"> DPF Solution <span>+£20</span></label>
+    <label class="service"><input type="checkbox" class="addon" value="EGR Solution" data-price="20"> EGR Solution <span>+£20</span></label>
+    <label class="service"><input type="checkbox" class="addon" value="AdBlue Solution" data-price="20"> AdBlue Solution <span>+£20</span></label>
+    <label class="service"><input type="checkbox" class="addon" value="DTC Work" data-price="20"> DTC Work <span>+£20</span></label>
+  </div>
+
+  <div class="card">
+    <h2>Booking summary</h2>
+    <div id="summary" class="summary">Enter your details and select a service.</div>
+    <br><button id="send">SEND BOOKING TO WHATSAPP</button>
+    <div class="note">* NAME, CAR REG and ADDRESS / POSTCODE are required before a booking can be sent.</div>
+  </div>
+</div>
+<script>
+const $=id=>document.getElementById(id);
+const fields=['name','reg','address','make','year','phone','date'];
+function selectedMain(){return document.querySelector('input[name="main"]:checked')}
+function build(){
+ const main=selectedMain(); const addons=[...document.querySelectorAll('.addon:checked')];
+ let total=main?Number(main.dataset.price):0; addons.forEach(a=>total+=Number(a.dataset.price));
+ let lines=[
+  'JBJ TUNING BOOKING', '',
+  'NAME: '+($('name').value.trim()||'—'),
+  'CAR REG: '+($('reg').value.trim().toUpperCase()||'—'),
+  'ADDRESS / POSTCODE: '+($('address').value.trim()||'—'),
+  'MAKE / MODEL: '+($('make').value.trim()||'—'),
+  'YEAR: '+($('year').value.trim()||'—'),
+  'PHONE: '+($('phone').value.trim()||'—'),
+  'PREFERRED DATE: '+($('date').value||'—'), '',
+  'SERVICE: '+(main?main.value:'—'),
+  'SOLUTIONS: '+(addons.length?addons.map(a=>a.value).join(', '):'None'),
+  'TOTAL: £'+total
+ ]; return lines.join('\n');
+}
+function update(){ $('summary').textContent=build(); }
+fields.forEach(f=>$(f).addEventListener('input',update)); document.querySelectorAll('input[type="radio"],input[type="checkbox"]').forEach(i=>i.addEventListener('change',update));
+$('send').addEventListener('click',()=>{
+ const missing=[]; if(!$('name').value.trim())missing.push('NAME'); if(!$('reg').value.trim())missing.push('CAR REG'); if(!$('address').value.trim())missing.push('ADDRESS / POSTCODE');
+ if(missing.length){alert('Please complete the required fields: '+missing.join(', ')); return;}
+ if(!selectedMain()){alert('Please select a main service before sending your booking.');return;}
+ const url='https://wa.me/447469879811?text='+encodeURIComponent(build()); window.location.href=url;
+}); update();
+</script>
+</body>
+</html>
