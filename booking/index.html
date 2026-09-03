@@ -4,19 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Book a Mobile Remap | JBJ Tuning + Solutions</title>
-  <meta name="description" content="Build your JBJ Tuning remap package, add vehicle solutions, choose your booking details and secure your appointment with a £50 deposit." />
+  <meta name="description" content="Build your JBJ Tuning remap package, add vehicle solutions, enter your details and send your booking on WhatsApp." />
   <style>
-    :root{
-      --bg:#080808;
-      --panel:#111;
-      --panel2:#181818;
-      --red:#e51414;
-      --red2:#ff3030;
-      --text:#f5f5f5;
-      --muted:#aaa;
-      --line:#2a2a2a;
-      --success:#36d17c;
-    }
+    :root{--bg:#080808;--panel:#111;--panel2:#181818;--red:#e51414;--red2:#ff3030;--text:#f5f5f5;--muted:#aaa;--line:#2a2a2a;--success:#36d17c}
     *{box-sizing:border-box}
     body{margin:0;font-family:Arial,Helvetica,sans-serif;background:radial-gradient(circle at 85% 15%, rgba(229,20,20,.12), transparent 28%),linear-gradient(180deg,#060606,#0b0b0b 45%,#080808);color:var(--text)}
     .wrap{max-width:1120px;margin:auto;padding:22px}.top{padding:28px 0 16px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:20px;align-items:center;flex-wrap:wrap}.brand h1{margin:0;font-size:clamp(34px,7vw,68px);font-style:italic;letter-spacing:-4px}.brand h1 span{color:var(--red)}.brand p{margin:4px 0 0;color:#ccc;letter-spacing:4px;font-size:12px}.badge{border:1px solid #4a1515;background:#160909;color:#fff;padding:10px 14px;border-radius:999px;font-size:13px;font-weight:700}.hero{padding:44px 0 24px}.eyebrow{color:var(--red);font-weight:800;letter-spacing:2px;text-transform:uppercase;font-size:13px}h2{font-size:clamp(34px,6vw,58px);line-height:.98;margin:10px 0 14px;text-transform:uppercase}.hero p{max-width:720px;color:#bbb;font-size:17px;line-height:1.6}.grid{display:grid;grid-template-columns:1.4fr .8fr;gap:24px;align-items:start}.card{background:linear-gradient(180deg,#141414,#0d0d0d);border:1px solid var(--line);border-radius:18px;padding:24px;box-shadow:0 20px 50px rgba(0,0,0,.25)}.section-title{margin:0 0 8px;font-size:24px}.section-copy{margin:0 0 18px;color:var(--muted)}.choice{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:17px;border:1px solid #303030;border-radius:14px;margin:10px 0;cursor:pointer;transition:.18s;background:#101010}.choice:hover{border-color:#5b1c1c}.choice.active{border-color:var(--red);box-shadow:0 0 0 1px var(--red) inset;background:#160b0b}.choice .left{display:flex;align-items:center;gap:12px}.choice input{accent-color:var(--red);width:18px;height:18px}.choice b{display:block;font-size:16px}.choice small{color:#999}.price{font-weight:900;font-size:19px;white-space:nowrap}.divider{height:1px;background:var(--line);margin:26px 0}.addons{display:grid;grid-template-columns:1fr 1fr;gap:10px}.addon{border:1px solid #303030;border-radius:12px;padding:14px;display:flex;gap:10px;align-items:center;background:#101010;cursor:pointer}.addon:has(input:checked){border-color:var(--red);background:#160b0b}.addon input{accent-color:var(--red);width:18px;height:18px}label span{display:block}.addon-price{color:#ddd;font-weight:700;margin-left:auto}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.field{margin:0}.field.full{grid-column:1/-1}.field label{display:block;font-size:13px;color:#bbb;margin:0 0 7px;font-weight:700}input, textarea{width:100%;background:#0b0b0b;border:1px solid #303030;color:#fff;border-radius:10px;padding:13px 14px;font:inherit;outline:none}input:focus,textarea:focus{border-color:var(--red)}textarea{min-height:92px;resize:vertical}.summary{position:sticky;top:18px}.summary-box{background:#0b0b0b;border:1px solid #292929;border-radius:14px;padding:16px;margin-top:14px}.row{display:flex;justify-content:space-between;gap:16px;padding:8px 0;color:#ccc}.row strong{color:#fff}.total{border-top:1px solid #2c2c2c;margin-top:9px;padding-top:16px;font-size:24px}.deposit{margin:16px 0;background:linear-gradient(90deg,#220808,#160909);border:1px solid #6f1c1c;border-radius:13px;padding:16px}.deposit b{font-size:20px}.deposit small{display:block;color:#bbb;margin-top:4px}.btn{width:100%;border:0;border-radius:12px;padding:16px 18px;background:var(--red);color:#fff;font-weight:900;font-size:16px;cursor:pointer;text-transform:uppercase;letter-spacing:.6px}.btn:hover{background:var(--red2)}.btn.secondary{background:#191919;border:1px solid #353535;margin-top:10px}.notice{font-size:12px;color:#888;line-height:1.5;margin:12px 2px 0}.success{display:none;margin-top:14px;border:1px solid #235b3c;background:#0c1c13;color:#c7ffdd;padding:13px;border-radius:10px}footer{padding:40px 0;color:#777;text-align:center;font-size:13px}@media(max-width:800px){.grid{grid-template-columns:1fr}.summary{position:static}.addons,.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}}
@@ -35,7 +25,7 @@
         <div class="divider"></div><h3 class="section-title">2. Add solutions</h3><p class="section-copy">Each selected solution adds £20 to your package.</p>
         <div class="addons"><label class="addon"><input type="checkbox" class="solution" value="DPF Solution" data-price="20"><span>DPF Solution</span><span class="addon-price">+£20</span></label><label class="addon"><input type="checkbox" class="solution" value="EGR Solution" data-price="20"><span>EGR Solution</span><span class="addon-price">+£20</span></label><label class="addon"><input type="checkbox" class="solution" value="AdBlue Solution" data-price="20"><span>AdBlue Solution</span><span class="addon-price">+£20</span></label><label class="addon"><input type="checkbox" class="solution" value="DTC Solution" data-price="20"><span>DTC Solution</span><span class="addon-price">+£20</span></label></div>
         <div class="divider"></div><label class="addon"><input type="checkbox" id="addGearbox" value="Gearbox / TCU Remap" data-price="180"><span><b>Add Gearbox / TCU Remap</b><small style="color:#999;margin-top:3px">Available with Stage 1 or Stage 2</small></span><span class="addon-price">+£180</span></label>
-        <div class="divider"></div><h3 class="section-title">3. Vehicle & booking details</h3><p class="section-copy"><b style="color:#e51414">* Required / mandatory field</b><br>We are a mobile service, so please complete every field marked with an <b style="color:#e51414">*</b> before sending your booking to WhatsApp.</p>
+        <div class="divider"></div><h3 class="section-title">3. Vehicle & booking details</h3><p class="section-copy"><b style="color:#e51414">* Required / mandatory field</b><br>Only Car registration, Your name and Mobile service address / postcode are mandatory. All other fields are optional.</p>
         <div class="form-grid">
           <div class="field"><label>Car registration <span style="color:#e51414">*</span></label><input id="reg" autocomplete="off" placeholder="AB12 CDE" required></div>
           <div class="field"><label>Make & model</label><input id="vehicle" placeholder="e.g. BMW 320d"></div>
@@ -43,7 +33,7 @@
           <div class="field"><label>Year</label><input id="year" inputmode="numeric" placeholder="2018"></div>
           <div class="field"><label>Your name <span style="color:#e51414">*</span></label><input id="name" autocomplete="name" required></div>
           <div class="field"><label>Mobile number</label><input id="phone" autocomplete="tel"></div>
-          <div class="field full"><label>Email address</label><input id="email" type="email" autocomplete="email"></div>
+          <div class="field full"><label>Email address (optional)</label><input id="email" type="text" autocomplete="email"></div>
           <div class="field full"><label>Mobile service address / postcode <span style="color:#e51414">*</span></label><input id="address" autocomplete="street-address" required></div>
           <div class="field full"><label>Preferred date / time</label><input id="preferred" placeholder="e.g. Friday afternoon"></div>
           <div class="field full"><label>Additional notes</label><textarea id="notes" placeholder="Anything we should know about the vehicle?"></textarea></div>
@@ -62,7 +52,7 @@
   function validate(){const required=['reg','name','address'];for(const id of required){const el=document.getElementById(id);if(!el.value.trim()){el.focus();el.style.borderColor='#e51414';return false}el.style.borderColor=''}return true}
   mainRadios.forEach(x=>x.addEventListener('change',render));solutions.forEach(x=>x.addEventListener('change',render));addGearbox.addEventListener('change',render);
   copyBtn.addEventListener('click',async()=>{await navigator.clipboard.writeText(bookingText());success.style.display='block';success.textContent='Booking summary copied.'});
-  continueBtn.addEventListener('click',()=>{if(!validate()){success.style.display='block';success.textContent='Please complete the highlighted booking details first.';return}localStorage.setItem('jbjBooking',JSON.stringify({summary:bookingText(),basket:basket()}));const message=encodeURIComponent(bookingText());window.location.href=`https://wa.me/${WHATSAPP_NUMBER}?text=${message}`});render();
+  continueBtn.addEventListener('click',()=>{if(!validate()){success.style.display='block';success.textContent='Please complete Car registration, Your name and Mobile service address / postcode before sending.';return}localStorage.setItem('jbjBooking',JSON.stringify({summary:bookingText(),basket:basket()}));const message=encodeURIComponent(bookingText());window.location.href=`https://wa.me/${WHATSAPP_NUMBER}?text=${message}`});render();
 </script>
 </body>
 </html>
