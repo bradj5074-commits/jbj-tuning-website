@@ -81,3 +81,11 @@ footer{border-top:1px solid #ffffff10;padding:30px 0;color:#8f98a4;font-size:13p
 .booking-head h1 span,.red{color:var(--red2)!important}
 .stage2-note{border-color:#3c6f16!important;background:#0d1907!important}
 .book-remap-btn{background:linear-gradient(180deg,var(--red2),var(--red))!important;border-color:#b6ff33!important;color:#061000!important}
+
+/* 2026-09-05 master logo refresh */
+.brand img,.hero-logo{content:url("/jbj-logo-master.webp?v=20260905-1")!important;background:#000}
+.brand img{width:250px;height:70px;object-fit:contain;object-position:left center;filter:drop-shadow(0 0 14px rgba(118,255,0,.18))}
+.hero-in{grid-template-columns:1fr!important;max-width:900px}
+.hero-in>div:last-child{display:none!important}
+.hero{min-height:620px}
+@media(max-width:540px){.brand img{width:220px;height:66px}.hero-in{padding:52px 0 42px}}
