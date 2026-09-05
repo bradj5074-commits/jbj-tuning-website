@@ -15,13 +15,12 @@ a{text-decoration:none;color:inherit}
 .wrap{max-width:1180px;margin:auto;padding:0 22px}
 header{position:sticky;top:0;z-index:30;background:rgba(3,4,6,.93);border-bottom:1px solid #ffffff12;backdrop-filter:blur(16px)}
 nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:18px}
-.brand img{width:188px;height:60px;object-fit:contain;filter:drop-shadow(0 6px 18px #000)}
+.brand img{width:220px;height:64px;object-fit:contain;filter:drop-shadow(0 6px 18px #000)}
 .nav{display:flex;gap:20px;font-size:12px;text-transform:uppercase;letter-spacing:.8px;color:#d8dee7;font-weight:800}
 .nav a:hover{color:#fff}
 .btn{display:inline-block;background:linear-gradient(180deg,var(--red2),var(--red));border:1px solid #c8ff70;padding:14px 20px;border-radius:7px;font-weight:950;letter-spacing:.4px;box-shadow:0 8px 24px rgba(118,255,0,.20);transition:.2s}
 .btn:hover{transform:translateY(-1px);filter:brightness(1.08)}
 .btn.alt{background:#0b0f15;border-color:#4a535f;box-shadow:none}
-
 .btn.deep-red{background:linear-gradient(180deg,#87ff12,#45a800);border-color:#9cff3b;box-shadow:0 10px 28px rgba(118,255,0,.28)}
 .btn.deep-red:hover{background:linear-gradient(180deg,#9aff20,#55c900)}
 .whatsapp-btn{background:#25D366!important;border-color:#25D366!important;color:#fff!important;box-shadow:0 10px 28px rgba(37,211,102,.24)!important}
@@ -32,7 +31,7 @@ linear-gradient(90deg,rgba(2,3,5,.98) 0%,rgba(3,5,8,.93) 50%,rgba(8,10,14,.68) 1
 radial-gradient(circle at 84% 42%,rgba(118,255,0,.22),transparent 25%),linear-gradient(145deg,#090b10,#020305);border-bottom:1px solid #ffffff10}
 .hero:before{content:"";position:absolute;inset:-20%;background:repeating-linear-gradient(135deg,transparent 0 14px,rgba(255,255,255,.025) 15px 16px);transform:rotate(-3deg)}
 .hero-in{position:relative;z-index:2;display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center;padding:88px 0 72px}
-.hero-logo{width:min(500px,100%);border-radius:8px;box-shadow:0 30px 90px #000b;border:1px solid #ffffff16}
+.hero-logo{width:min(560px,100%);border-radius:8px;box-shadow:0 30px 90px #000b;border:1px solid #ffffff16;background:#000}
 .kicker{color:#a6ff55;text-transform:uppercase;font-size:12px;letter-spacing:2.4px;font-weight:950}
 .hero h1,.page-hero h1{font-size:clamp(44px,6vw,78px);line-height:.95;margin:14px 0 16px;letter-spacing:-2.5px;text-transform:uppercase}
 .hero h1 span,.page-hero h1 span{color:var(--red2)}
@@ -70,11 +69,11 @@ section{padding:72px 0}
 .cta-strip{padding:28px;background:linear-gradient(90deg,#151a21,#0b0f14);border:1px solid #343d48;border-radius:10px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
 footer{border-top:1px solid #ffffff10;padding:30px 0;color:#8f98a4;font-size:13px}.foot{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
 .floating{display:none}
-@media(max-width:920px){.hero-in{grid-template-columns:1fr}.hero-logo{width:min(440px,100%)}.grid,.grid.three{grid-template-columns:repeat(2,1fr)}.two,.contact-grid{grid-template-columns:1fr}.nav{display:none}.link-grid{grid-template-columns:1fr 1fr}}
-@media(max-width:540px){.hero{min-height:auto}.hero-in{padding:58px 0 44px}.hero h1,.page-hero h1{font-size:48px}.hero p,.page-hero p{font-size:17px}.grid,.grid.three,.link-grid{grid-template-columns:1fr}.brand img{width:154px}.desktop-quote{display:none}.services-bar .wrap{justify-content:flex-start;overflow-x:auto;flex-wrap:nowrap;padding-bottom:4px}.service-pill{white-space:nowrap}.floating{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:40;gap:8px}.floating a{flex:1;text-align:center;box-shadow:0 10px 30px #0009}section{padding:56px 0}.page-hero{padding:60px 0 44px}}
+@media(max-width:920px){.hero-in{grid-template-columns:1fr}.hero-logo{width:min(520px,100%)}.grid,.grid.three{grid-template-columns:repeat(2,1fr)}.two,.contact-grid{grid-template-columns:1fr}.nav{display:none}.link-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:540px){.hero{min-height:auto}.hero-in{padding:58px 0 44px}.hero h1,.page-hero h1{font-size:48px}.hero p,.page-hero p{font-size:17px}.grid,.grid.three,.link-grid{grid-template-columns:1fr}.brand img{width:185px}.desktop-quote{display:none}.services-bar .wrap{justify-content:flex-start;overflow-x:auto;flex-wrap:nowrap;padding-bottom:4px}.service-pill{white-space:nowrap}.floating{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:40;gap:8px}.floating a{flex:1;text-align:center;box-shadow:0 10px 30px #0009}section{padding:56px 0}.page-hero{padding:60px 0 44px}}
 
-/* Neon green + white brand system */
-.brand img,.hero-logo{content:url("/jbj-logo-neon.svg");background:#000}
+/* Final neon green + white JBJ brand system */
+.brand img,.hero-logo{content:url("/jbj-logo-neon-final.jpg");background:#000}
 .btn.deep-red{color:#061000}
 .btn:not(.alt):not(.whatsapp-btn){color:#061000}
 .kicker,.hero h1 span,.page-hero h1 span,.checks span{filter:drop-shadow(0 0 10px rgba(118,255,0,.25))}
