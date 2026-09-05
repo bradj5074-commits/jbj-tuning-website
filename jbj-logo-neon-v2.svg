@@ -1,16 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 430" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="20 20 1080 390" role="img" aria-labelledby="title desc">
 <title id="title">JBJ Tuning + Solutions</title><desc id="desc">Aggressive neon green and metallic white JBJ performance logo with rev counter</desc>
 <defs>
   <linearGradient id="lime" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#bfff37"/><stop offset="0.52" stop-color="#8dff08"/><stop offset="1" stop-color="#52d600"/></linearGradient>
   <linearGradient id="silver" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="0.58" stop-color="#f4f4f4"/><stop offset="1" stop-color="#b9bec3"/></linearGradient>
-  <filter id="glow" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="7" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <filter id="glow" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
 </defs>
-<rect width="1200" height="430" fill="#020302"/>
 <path d="M310 168 C515 35 900 28 1090 168" fill="none" stroke="url(#lime)" stroke-width="16" stroke-linecap="round" filter="url(#glow)"/>
 <path d="M356 164 C552 61 846 58 1028 164" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" opacity=".95"/>
-<g stroke="#8dff08" stroke-width="16" stroke-linecap="square"><path d="M862 70 l-18 35"/><path d="M910 82 l-20 38"/><path d="M956 99 l-23 39"/><path d="M1000 122 l-25 39"/><path d="M1037 148 l-27 37"/></g>
+<g stroke="#8dff08" stroke-width="14" stroke-linecap="square"><path d="M862 70 l-18 35"/><path d="M910 82 l-20 38"/><path d="M956 99 l-23 39"/><path d="M1000 122 l-25 39"/><path d="M1037 148 l-27 37"/></g>
 <path d="M834 177 L1006 75" stroke="url(#lime)" stroke-width="18" stroke-linecap="round" filter="url(#glow)"/>
-<g font-family="Impact, Haettenschweiler, 'Arial Black', sans-serif" font-style="italic" font-weight="900"><text x="54" y="294" font-size="255" fill="url(#silver)" letter-spacing="-22">J</text><text x="292" y="294" font-size="255" fill="url(#lime)" letter-spacing="-27" filter="url(#glow)">B</text><text x="620" y="294" font-size="255" fill="url(#silver)" letter-spacing="-22">J</text></g>
+<g font-family="Impact, Haettenschweiler, Arial Black, sans-serif" font-style="italic" font-weight="900"><text x="54" y="294" font-size="255" fill="url(#silver)" letter-spacing="-22">J</text><text x="292" y="294" font-size="255" fill="url(#lime)" letter-spacing="-27" filter="url(#glow)">B</text><text x="620" y="294" font-size="255" fill="url(#silver)" letter-spacing="-22">J</text></g>
 <text x="58" y="365" font-family="Arial Black, Arial, sans-serif" font-size="63" font-style="italic" font-weight="900" fill="#fff">TUNING</text><text x="382" y="365" font-family="Arial Black, Arial, sans-serif" font-size="66" font-style="italic" font-weight="900" fill="url(#lime)">+</text><text x="448" y="365" font-family="Arial Black, Arial, sans-serif" font-size="63" font-style="italic" font-weight="900" fill="#fff">SOLUTIONS</text>
-<text x="128" y="411" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#dfe2e5" letter-spacing="6">PERFORMANCE  |  DIAGNOSTICS  |  SOLUTIONS</text>
+<text x="128" y="405" font-family="Arial, sans-serif" font-size="21" font-weight="700" fill="#dfe2e5" letter-spacing="5">PERFORMANCE | DIAGNOSTICS | SOLUTIONS</text>
 </svg>
