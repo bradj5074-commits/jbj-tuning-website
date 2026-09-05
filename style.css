@@ -73,7 +73,7 @@ footer{border-top:1px solid #ffffff10;padding:30px 0;color:#8f98a4;font-size:13p
 @media(max-width:540px){.hero{min-height:auto}.hero-in{padding:58px 0 44px}.hero h1,.page-hero h1{font-size:48px}.hero p,.page-hero p{font-size:17px}.grid,.grid.three,.link-grid{grid-template-columns:1fr}.brand img{width:185px}.desktop-quote{display:none}.services-bar .wrap{justify-content:flex-start;overflow-x:auto;flex-wrap:nowrap;padding-bottom:4px}.service-pill{white-space:nowrap}.floating{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:40;gap:8px}.floating a{flex:1;text-align:center;box-shadow:0 10px 30px #0009}section{padding:56px 0}.page-hero{padding:60px 0 44px}}
 
 /* Final neon green + white JBJ brand system */
-.brand img,.hero-logo{content:url("/jbj-logo-neon-final.jpg");background:#000}
+.brand img,.hero-logo{content:url("/jbj-logo-neon.svg");background:#000}
 .btn.deep-red{color:#061000}
 .btn:not(.alt):not(.whatsapp-btn){color:#061000}
 .kicker,.hero h1 span,.page-hero h1 span,.checks span{filter:drop-shadow(0 0 10px rgba(118,255,0,.25))}
