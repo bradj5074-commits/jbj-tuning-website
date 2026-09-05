@@ -1,1 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" role="img" aria-labelledby="title desc"><title id="title">JBJ Tuning + Solutions</title><desc id="desc">White and neon green JBJ Tuning logo with performance gauge</desc><defs><linearGradient id="lime" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#b6ff33"/><stop offset="1" stop-color="#76ff00"/></linearGradient><filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><rect width="1200" height="680" fill="#000"/><g fill="none" stroke-linecap="square"><path d="M430 210 C590 70 900 65 1040 215" stroke="#fff" stroke-width="13"/><path d="M405 205 C560 45 910 40 1080 210" stroke="url(#lime)" stroke-width="20" stroke-dasharray="115 20" filter="url(#glow)"/><path d="M875 215 L1015 120" stroke="url(#lime)" stroke-width="22" filter="url(#glow)"/></g><text x="95" y="420" font-family="Arial Black, Arial, sans-serif" font-size="285" font-style="italic" font-weight="900" fill="#fff" letter-spacing="-34">J</text><text x="390" y="420" font-family="Arial Black, Arial, sans-serif" font-size="285" font-style="italic" font-weight="900" fill="url(#lime)" letter-spacing="-34" filter="url(#glow)">B</text><text x="745" y="420" font-family="Arial Black, Arial, sans-serif" font-size="285" font-style="italic" font-weight="900" fill="#fff" letter-spacing="-34">J</text><text x="122" y="515" font-family="Arial Black, Arial, sans-serif" font-size="78" font-style="italic" font-weight="900" fill="#fff" letter-spacing="28">TUNING</text><line x1="110" y1="565" x2="340" y2="565" stroke="#83ff00" stroke-width="7"/><text x="385" y="585" font-family="Arial, sans-serif" font-size="54" font-weight="800" fill="#83ff00" letter-spacing="17">SOLUTIONS</text><line x1="930" y1="565" x2="1090" y2="565" stroke="#83ff00" stroke-width="7"/><text x="165" y="642" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#fff" letter-spacing="6">MORE POWER   |   CLEANER DRIVING   |   REAL RESULTS</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" role="img" aria-labelledby="title desc">
+<title id="title">JBJ Tuning + Solutions</title><desc id="desc">Compact white and neon green JBJ performance logo</desc>
+<defs>
+<linearGradient id="lime" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#b8ff37"/><stop offset="1" stop-color="#70ee00"/></linearGradient>
+<linearGradient id="silver" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset=".6" stop-color="#f4f4f4"/><stop offset="1" stop-color="#bfc4c8"/></linearGradient>
+<filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="6" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="1200" height="420" rx="20" fill="#000"/>
+<path d="M390 124 C575 28 885 27 1068 130" fill="none" stroke="url(#lime)" stroke-width="17" stroke-linecap="round" filter="url(#softGlow)"/>
+<path d="M438 127 C615 49 844 52 1002 130" fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round" opacity=".95"/>
+<path d="M883 145 L1040 80" stroke="url(#lime)" stroke-width="17" stroke-linecap="round" filter="url(#softGlow)"/>
+<g font-family="Arial Black, Impact, Arial, sans-serif" font-style="italic" font-weight="900">
+<text x="78" y="282" font-size="245" fill="url(#silver)" letter-spacing="-18">J</text>
+<text x="336" y="282" font-size="245" fill="url(#lime)" letter-spacing="-18" filter="url(#softGlow)">B</text>
+<text x="705" y="282" font-size="245" fill="url(#silver)" letter-spacing="-18">J</text>
+</g>
+<text x="84" y="354" font-family="Arial Black, Arial, sans-serif" font-style="italic" font-weight="900" font-size="64" fill="#fff" letter-spacing="5">TUNING</text>
+<text x="424" y="354" font-family="Arial Black, Arial, sans-serif" font-style="italic" font-weight="900" font-size="64" fill="url(#lime)">+</text>
+<text x="484" y="354" font-family="Arial Black, Arial, sans-serif" font-style="italic" font-weight="900" font-size="64" fill="#fff" letter-spacing="3">SOLUTIONS</text>
+<text x="180" y="397" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#d9d9d9" letter-spacing="7">PERFORMANCE  |  DIAGNOSTICS  |  SOLUTIONS</text>
+</svg>
