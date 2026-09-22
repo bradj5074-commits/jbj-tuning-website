@@ -62,3 +62,13 @@ section{position:relative}.head h2,.copy h2{color:#111711}.grid{gap:20px}.card{b
 .page-hero{background:linear-gradient(105deg,#fbfcfa,#e7eee3);border-bottom:1px solid #d0dbcd}.quote-box{border-radius:16px;border-color:#d1dcd0;box-shadow:0 18px 42px rgba(17,31,17,.09)}.quote-points div{border-radius:10px}.link-grid a{border-radius:12px;box-shadow:0 8px 22px rgba(0,0,0,.045);transition:.2s}.link-grid a:hover{transform:translateY(-2px);border-color:#92b986}.cta-strip{border-radius:16px;box-shadow:0 14px 35px rgba(0,0,0,.07)}
 footer{background:#111711;color:#aeb9ad;border-top:4px solid #76ff00}.foot{padding:4px 0}
 @media(max-width:540px){.hero h1,.page-hero h1{font-size:44px}.card{padding:23px}.hero:after{opacity:.55}}
+
+
+/* 2026-09-22 mobile contrast correction — darker premium panels */
+.band{background:linear-gradient(135deg,#111812 0%,#1a251b 55%,#101611 100%)!important;color:#f7fff5!important;border-block-color:#314032!important}
+.band .head h2,.band .copy h2,.band h2,.band h3{color:#fff!important;text-shadow:none!important}
+.band .head p,.band .copy p,.band p{color:#d6dfd4!important}
+.band .kicker{color:#76ff00!important;text-shadow:0 0 18px rgba(118,255,0,.18)}
+.band .btn.alt{background:#f8faf7!important;color:#111711!important;border-color:#dce4da!important}
+.band .btn:not(.alt):not(.whatsapp-btn){color:#071007!important}
+@media(max-width:540px){.band{background:linear-gradient(155deg,#111812,#202b20)!important}.band .head h2,.band h2{color:#fff!important}.band .head p,.band p{color:#d8e0d6!important}}
