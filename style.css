@@ -30,3 +30,20 @@ section{padding:72px 0}.head{max-width:780px;margin-bottom:30px}.head h2,.copy h
 .brand{width:250px;height:78px;background:url('/jbj-logo-master-new.webp?rev=4') left center/contain no-repeat;filter:drop-shadow(0 0 14px rgba(118,255,0,.22))}
 .brand img{opacity:0!important;visibility:hidden!important;width:250px!important;height:78px!important}
 @media(max-width:540px){.brand{width:300px;height:108px;background-size:contain}.brand img{width:300px!important;height:108px!important}}
+
+
+/* 2026-09-22 — JBJ light-theme refresh across all pages */
+:root{--bg:#f5f7f4;--bg2:#ffffff;--panel:#ffffff;--panel2:#eef2ed;--text:#111711;--muted:#59635a;--line:#d8dfd7;--silver:#374238}
+body{color:var(--text);background:radial-gradient(circle at 82% 3%,rgba(118,255,0,.10),transparent 28%),linear-gradient(180deg,#ffffff 0,#f3f6f2 100%)}
+body:before{opacity:.08;background:linear-gradient(45deg,#00000008 25%,transparent 25%,transparent 75%,#00000008 75%),linear-gradient(45deg,#00000008 25%,transparent 25%,transparent 75%,#00000008 75%)}
+header{background:rgba(255,255,255,.96);border-bottom:1px solid #dce3db;box-shadow:0 4px 20px rgba(0,0,0,.06)}
+.nav{color:#263027}.nav a:hover{color:#45a800}
+.btn.alt{background:#fff;border-color:#9ba79c;color:#172018}.hero{background:radial-gradient(circle at 84% 42%,rgba(118,255,0,.15),transparent 28%),linear-gradient(145deg,#ffffff,#edf3eb);border-bottom:1px solid #dce3db}.hero:before{background:repeating-linear-gradient(135deg,transparent 0 14px,rgba(0,0,0,.018) 15px 16px)}
+.hero p,.page-hero p,.head p,.copy p,.card p,.quote-box p,.prose p,.prose li{color:var(--muted)}
+.chip{background:linear-gradient(180deg,#fff,#eef3ed);border-color:#d1dad0;color:#1d271e}.price{background:linear-gradient(90deg,rgba(118,255,0,.10),transparent)}.price small{color:#4d594e}.trust{color:#465247}
+.services-bar{background:#f0f4ef;border-block:1px solid #dce3db;box-shadow:0 10px 28px rgba(0,0,0,.05)}.service-pill{background:#fff;border-color:#d4ddd3;color:#172018}
+.card{background:#fff;border-color:#d7dfd6;box-shadow:0 12px 28px rgba(0,0,0,.07)}.card a.more{color:#318600}
+.band{background:linear-gradient(180deg,#eef3ed,#f8faf7);border-block:1px solid #dce3db}
+.quote-box{background:#fff;border-color:#d3ddd2;box-shadow:0 14px 35px rgba(0,0,0,.08)}.quote-points div{background:#f4f7f3;border-color:#d9e1d8}.contact-links a{background:#fff;border-color:#d6dfd5}
+.page-hero{background:radial-gradient(circle at 86% 40%,rgba(118,255,0,.14),transparent 25%),linear-gradient(90deg,#fff,#edf3eb);border-bottom:1px solid #dce3db}.breadcrumb{color:#667267}.breadcrumb a{color:#374438}.link-grid a{background:#fff;border-color:#d7dfd6}.cta-strip{background:#fff;border-color:#d5ddd4}footer{border-top:1px solid #dce3db;color:#667067;background:#f7f9f6}
+.stage2-note{background:#effbe8!important}.floating a{box-shadow:0 10px 25px rgba(0,0,0,.15)}
