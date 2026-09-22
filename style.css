@@ -87,3 +87,14 @@ section:not(.band):not(.recent-results){background:transparent}
 header{background:rgba(239,242,239,.97)!important}
 footer{background:#171d18!important;color:#c4cdc3!important}
 @media(max-width:540px){.band{background:linear-gradient(155deg,#cbd0cc,#bbc2bc)!important}.band .head h2,.band h2{color:#111711!important}.band .head p,.band p{color:#414b42!important}}
+
+
+/* 2026-09-22 seamless header/background blend */
+header{background:linear-gradient(180deg,#e2e6e2 0%,#dce1dc 100%)!important;border-bottom:0!important;box-shadow:none!important}
+nav{background:transparent!important}
+.brand{filter:drop-shadow(0 5px 12px rgba(20,35,20,.10))}
+.hero{border-top:0!important;border-bottom:0!important;background:radial-gradient(circle at 82% 20%,rgba(118,255,0,.09),transparent 30%),linear-gradient(180deg,#dce1dc 0%,#d6dbd6 55%,#d2d8d2 100%)!important}
+section{border-top-color:transparent!important}
+.services-bar,.recent-results,.band{box-shadow:none!important}
+.services-bar{border-top:0!important}
+@media(max-width:540px){header{background:linear-gradient(180deg,#e2e6e2,#dce1dc)!important}.hero{background:radial-gradient(circle at 82% 18%,rgba(118,255,0,.08),transparent 30%),linear-gradient(180deg,#dce1dc,#d3d9d3)!important}}
