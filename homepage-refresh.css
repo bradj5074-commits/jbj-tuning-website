@@ -60,3 +60,12 @@
 .menu-actions{margin:24px 28px 32px!important;padding-top:20px!important;border-top:1px solid #292f2d}
 @media(max-width:760px){.home-services{grid-template-columns:1fr 1fr}.home-simple .hero-in{padding:38px 0 38px!important}.home-simple h1{font-size:42px!important}}
 @media(max-width:480px){.home-services{grid-template-columns:1fr}.home-services a{padding:15px 17px}.menu-brand{padding-top:22px}.menu-links a{padding:15px 6px!important}}
+
+/* 2026-09-27 — stronger first-screen introduction */
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+.hero-actions .btn{min-width:190px;text-align:center}
+.hero-trust{display:flex;gap:18px;flex-wrap:wrap;margin-top:20px;padding-top:18px;border-top:1px solid #2b3130}
+.hero-trust span{color:#aeb6b0;font-size:12px;font-weight:700;letter-spacing:.2px}
+.klarna-badge{display:inline-flex;align-items:center;justify-content:center;padding:0;background:transparent;border-radius:7px;overflow:hidden;min-width:120px;height:49px}
+.klarna-badge img{display:block;width:120px;height:49px;object-fit:contain}
+@media(max-width:480px){.hero-actions{display:grid;grid-template-columns:1fr}.hero-actions .btn{width:100%}.hero-trust{gap:10px 14px}.hero-trust span{font-size:11px}}
