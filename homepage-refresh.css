@@ -28,3 +28,16 @@
 .home-menu-button{flex:none!important;display:flex!important;margin:0!important}
 @media(max-width:760px){.home-check-card,.home-end-inner{align-items:flex-start;flex-direction:column}.home-job-grid{grid-template-columns:1fr 1fr}.home-simple .hero-in{padding:72px 0 62px}}
 @media(max-width:480px){.home-job-grid{grid-template-columns:1fr}.home-check-card{padding:24px}.home-check-card .btn{width:100%;text-align:center}}
+
+/* 2026-09-27 homepage balance correction */
+.home-simple{min-height:0!important}
+.home-simple .hero-in{padding:72px 0 64px!important;max-width:900px}
+.home-simple h1{margin-top:12px}
+.home-intro-secondary{font-size:16px!important;max-width:820px!important;margin-top:12px}
+.home-check{padding:42px 0!important}
+.home-payment{padding:46px 0!important;background:#101314!important;border-top:1px solid #272d2b}
+.payment-inner{display:flex;align-items:center;justify-content:space-between;gap:38px}
+.payment-inner h2{font-size:34px;margin:5px 0 8px;color:#f3f5f2}.payment-inner p{color:#a9b0aa;max-width:700px;margin:0}
+.payment-brands{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.payment-brands strong{display:inline-flex;align-items:center;justify-content:center;min-width:120px;padding:13px 18px;background:#f2f4f2;color:#111;border-radius:7px;font-size:18px;letter-spacing:-.4px}
+@media(max-width:760px){.home-simple .hero-in{padding:54px 0 48px!important}.payment-inner{align-items:flex-start;flex-direction:column}.home-payment{padding:38px 0!important}}
