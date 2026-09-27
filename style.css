@@ -158,3 +158,29 @@ input,select,textarea{background:#141718!important;color:#f3f5f2!important;borde
   .hero-in{padding:58px 0 52px}.hero h1,.page-hero h1{font-size:42px!important;letter-spacing:-1.5px}
   section{padding:62px 0}.head h2,.copy h2{font-size:34px}.card{padding:23px}
 }
+
+
+/* 2026-09-27 — global corner navigation */
+header nav{position:relative}
+.nav{display:none!important}
+.menu-toggle{width:48px;height:48px;border:1px solid #343b38;background:#151819;border-radius:10px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;cursor:pointer;padding:0;order:3}
+.menu-toggle span{display:block;width:21px;height:2px;background:#eef2ee;border-radius:2px;transition:.2s}
+.menu-toggle:hover{border-color:#5d6b62;background:#1c2021}
+.site-menu{position:fixed;inset:0;z-index:100;visibility:hidden;pointer-events:none}
+.site-menu.open{visibility:visible;pointer-events:auto}
+.menu-backdrop{position:absolute;inset:0;background:rgba(0,0,0,.72);opacity:0;transition:.25s;backdrop-filter:blur(4px)}
+.site-menu.open .menu-backdrop{opacity:1}
+.menu-panel{position:absolute;right:0;top:0;height:100%;width:min(430px,92vw);background:#101314;border-left:1px solid #303735;padding:26px 26px 38px;transform:translateX(100%);transition:.28s ease;overflow:auto;box-shadow:-30px 0 70px rgba(0,0,0,.35)}
+.site-menu.open .menu-panel{transform:translateX(0)}
+.menu-top{display:flex;align-items:center;justify-content:space-between;padding-bottom:22px;border-bottom:1px solid #292f2d;margin-bottom:18px}
+.menu-top strong{font-size:14px;letter-spacing:1.6px;color:#83c65d}
+.menu-close{width:42px;height:42px;border-radius:9px;border:1px solid #343b38;background:#171a1b;color:#fff;font-size:24px;cursor:pointer}
+.menu-links{display:grid}
+.menu-links a{padding:15px 4px;border-bottom:1px solid #252b29;color:#e9ede9;font-size:17px;font-weight:750;display:flex;justify-content:space-between;align-items:center}
+.menu-links a:after{content:'›';color:#6f7a73;font-size:23px;font-weight:400}
+.menu-links a:hover{color:#83c65d}
+.menu-group{font-size:11px;letter-spacing:1.8px;color:#7f8982;text-transform:uppercase;margin:23px 0 6px;font-weight:800}
+.menu-actions{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:26px}
+.menu-actions .btn{text-align:center;padding:13px 10px}
+header nav>.btn{margin-left:auto;margin-right:4px}
+@media(max-width:640px){header nav>.btn{display:none}.menu-toggle{margin-left:auto}.menu-panel{width:94vw}.menu-actions{grid-template-columns:1fr}}
