@@ -11,3 +11,20 @@
 .results-image-link{border-color:#303835!important;background:#111!important;box-shadow:0 18px 50px rgba(0,0,0,.25)!important}
 .jbj-story,.jbj-promise{background:linear-gradient(180deg,#191d1e,#141718)!important;border-color:#2c3330!important;color:#f3f5f2!important}
 .jbj-story p,.jbj-promise p,.jbj-promise ul{color:#a9b0aa!important}
+
+
+/* 2026-09-27 — simplified premium homepage */
+.home-simple{min-height:560px}
+.home-simple .hero-in{max-width:820px;padding:105px 0 92px}
+.home-simple h1{font-size:clamp(48px,6.5vw,82px)}
+.home-check{padding:46px 0!important;background:#0d0f10!important}
+.home-check-card{display:flex;align-items:center;justify-content:space-between;gap:30px;padding:30px 34px;background:linear-gradient(135deg,#191d1e,#141718);border:1px solid #303735;border-radius:14px}
+.home-check-card h2{margin:5px 0 7px;font-size:32px;letter-spacing:-1px}.home-check-card p{margin:0;color:#a9b0aa;max-width:650px}
+.home-job-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:20px}
+.home-job-grid article{display:flex;flex-direction:column;gap:5px;padding:20px;background:#171a1b;border:1px solid #2d3431;border-radius:11px}
+.home-job-grid span{font-size:13px;color:#aab2ac}.home-job-grid strong{font-size:19px;color:#f3f5f2}.home-job-grid small{color:#83c65d;font-weight:700}
+.home-end{padding:52px 0!important;background:#0b0d0e!important;border-top:1px solid #252b29}
+.home-end-inner{display:flex;justify-content:space-between;align-items:center;gap:28px}.home-end h2{margin:6px 0;font-size:32px;color:#f3f5f2}.home-end p{color:#a9b0aa;max-width:720px;margin-bottom:0}
+.home-menu-button{flex:none!important;display:flex!important;margin:0!important}
+@media(max-width:760px){.home-check-card,.home-end-inner{align-items:flex-start;flex-direction:column}.home-job-grid{grid-template-columns:1fr 1fr}.home-simple .hero-in{padding:72px 0 62px}}
+@media(max-width:480px){.home-job-grid{grid-template-columns:1fr}.home-check-card{padding:24px}.home-check-card .btn{width:100%;text-align:center}}
