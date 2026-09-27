@@ -69,3 +69,17 @@
 .klarna-badge{display:inline-flex;align-items:center;justify-content:center;padding:0;background:transparent;border-radius:7px;overflow:hidden;min-width:120px;height:49px}
 .klarna-badge img{display:block;width:120px;height:49px;object-fit:contain}
 @media(max-width:480px){.hero-actions{display:grid;grid-template-columns:1fr}.hero-actions .btn{width:100%}.hero-trust{gap:10px 14px}.hero-trust span{font-size:11px}}
+
+/* 2026-09-27 — mobile hero visibility fix: remove blank first-screen void */
+@media(max-width:760px){
+  .hero.home-simple{display:block!important;visibility:visible!important;opacity:1!important;min-height:0!important;height:auto!important;padding:0!important;background:radial-gradient(circle at 82% 18%,rgba(101,168,68,.13),transparent 28%),linear-gradient(135deg,#0b0d0e,#141817)!important}
+  .hero.home-simple .wrap{display:block!important}
+  .hero.home-simple .hero-in{display:block!important;visibility:visible!important;opacity:1!important;min-height:0!important;height:auto!important;padding:34px 22px 36px!important}
+  .hero.home-simple .hero-in>div{display:block!important;visibility:visible!important;opacity:1!important}
+  .hero.home-simple .kicker{display:block!important}
+  .hero.home-simple h1{display:block!important;margin:9px 0 15px!important;font-size:38px!important;line-height:1.04!important}
+  .hero.home-simple p{display:block!important;font-size:15px!important;line-height:1.6!important;margin:0 0 10px!important}
+  .home-intro-secondary{display:block!important}
+  .hero-actions,.hero-trust,.home-services{display:flex!important}
+  .home-services{display:grid!important}
+}
